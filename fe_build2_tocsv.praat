@@ -6,6 +6,7 @@ segment_tier_idx = 2
 segment_division = 5
 header$ = "sound, sound_idx, segment, segment_idx, time, pitch, intensity, f1, f2"
 line_sep$ = "::"
+n_formants = 6.0
 
 
 procedure get_pitch: .time
@@ -106,7 +107,7 @@ To Intensity: 50, 0
 
 # build formants
 selectObject: "Sound " + sound_name$
-To Formant (burg): 0.0, 5.0, 5500.0, 0.025, 50.0
+To Formant (burg): 0.0, n_formants, 5500.0, 0.025, 30.0
 
 
 selectObject: "TextGrid " + sound_name$
